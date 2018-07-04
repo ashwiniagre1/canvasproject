@@ -39,6 +39,12 @@ const routes: Routes = [
 	     	{
      	path: 'core/testwomap', loadChildren: './../pages/canvasprojecttest/core/testwomap/testwomap.module#TestwomapModule'
      	},	
+	     	{
+     	path: 'core/cardui', loadChildren: './../pages/canvasprojecttest/core/cardui/cardui.module#CarduiModule'
+     	},	
+	     	{
+     	path: 'core/formui', loadChildren: './../pages/canvasprojecttest/core/formui/formui.module#FormuiModule'
+     	},	
 	    ]
   }
 ];
