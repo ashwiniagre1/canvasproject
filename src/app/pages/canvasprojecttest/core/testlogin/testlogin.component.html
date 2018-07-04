@@ -1,0 +1,19 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Login
+    </amexio-header>
+    <amexio-body>
+        <amexio-email-input [field-label]="'Email'" [(ngModel)]="testloginModel.email" name="testloginModel.email" [place-holder]="'Enter email id'" [allow-blank]="false" [error-msg]="'Please enter email id'" [font-size]="10" [has-label]="true">
+        </amexio-email-input>
+        <amexio-password-input [field-label]="'Password'" [(ngModel)]="testloginModel.password" name="testloginModel.password" [place-holder]="'enter password'" [allow-blank]="false" [error-msg]="'Please enter password'" [min-length]="0" [max-length]="20" [font-size]="10"
+            [has-label]="true">
+        </amexio-password-input>
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Login'" [type]="'theme-color'" [tooltip]="'login'" [size]="'default'" [form-bind]="'login'">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>

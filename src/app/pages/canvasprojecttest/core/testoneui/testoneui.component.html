@@ -1,0 +1,36 @@
+<amexio-accordion [transparent]="false" [angle-icon]="false" [expand-all]="false">
+    <amexio-accordion-tab [header]="'Accordion Tab'" [active]="true" [disabled]="false">
+        <amexio-chart-bubble *ngIf="testbubblechartLocalData" [data]="testbubblechartLocalData" [height]="'400px'" [width]="'100%'">
+
+            <amexio-chart-title [title]="'test bubble'" [font-size]="15" [bold]="true" [italic]="true">
+            </amexio-chart-title>
+
+            <amexio-chart-legend [position]="'top'" [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18" [alignment]="'center'" [bold]="true">
+            </amexio-chart-legend>
+
+            <amexio-chart-horizontal-axis [title]="'horizontal'"></amexio-chart-horizontal-axis>
+
+
+            <amexio-chart-vertical-axis [title]="'vertical'">
+            </amexio-chart-vertical-axis>
+        </amexio-chart-bubble>
+    </amexio-accordion-tab>
+    <amexio-accordion-tab [header]="'Accordion Tab'" [active]="false" [disabled]="false">
+        <amexio-chart-candlestick *ngIf="testcandelchartLocalData" [data]="testcandelchartLocalData" [height]="'400px'" [width]="'100%'">
+
+            <amexio-chart-title [title]="'testcandel'" [font-size]="15">
+            </amexio-chart-title>
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+            </amexio-chart-legend>
+
+            <amexio-chart-horizontal-axis></amexio-chart-horizontal-axis>
+
+
+            <amexio-chart-vertical-axis>
+            </amexio-chart-vertical-axis>
+
+
+        </amexio-chart-candlestick>
+    </amexio-accordion-tab>
+</amexio-accordion>

@@ -1,0 +1,24 @@
+<amexio-vertical-tab-view>
+    <amexio-tab [title]="'testone'" active="true" [icon]="''">
+        <amexio-dropdown [(ngModel)]="testallcomponentModel.testdrop" name="testallcomponentModel.testdrop" [search]="true" [field-label]="'country'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [data]="testdrop_Data"
+            [display-field]="'countryName'" [value-field]="'id'" [search]="'true'" (click)="click_testdrop($event)">
+        </amexio-dropdown>
+        <amexio-date-time-picker [field-label]="'Date Time'" [time-picker]="true" [date-picker]="true" [(ngModel)]="testallcomponentModel.testdate" name="testallcomponentModel.testdate">
+        </amexio-date-time-picker>
+    </amexio-tab>
+</amexio-vertical-tab-view>
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-floating-button [type]="'green'" [relative]="true" [icon]="'fa fa-amazon fa 2x'" [block]="'circle'" [horizontal-position]="'left'" [vertical-position]="'top'" [position-top]="'27'" [position-left]="'NaN%'">
+        </amexio-floating-button>
+        <amexio-paginator [pages]="50" [rows]="5">
+        </amexio-paginator>
+        <amexio-progress-bar [show]="true" [current-value]="'34'" [type]="'success'" [label]="'progress bar'" [height]="50" [stripped]="true">
+        </amexio-progress-bar>
+        <amexio-image [icon-class]="'fa fa-user'">
+        </amexio-image>
+
+        <amexio-video-player path="http://www.amexio.org/showcaseapp/v3/assets/videos/sample_bunny.mp4">
+        </amexio-video-player>
+    </amexio-column>
+</amexio-row>

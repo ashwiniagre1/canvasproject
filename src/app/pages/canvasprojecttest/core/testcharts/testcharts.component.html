@@ -1,0 +1,33 @@
+<amexio-row>
+    <amexio-column size="12">
+
+        <amexio-chart-area *ngIf="testareachartLocalData" [data]="testareachartLocalData" [height]="'400px'" [width]="'100%'">
+
+
+            <amexio-chart-title [title]="'Chart Title'" [color]="'#b61818'" [font-size]="15" [bold]="true" [italic]="true">
+            </amexio-chart-title>
+
+
+
+            <amexio-chart-legend [position]="'bottom'" [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18" [alignment]="'center'" [bold]="true">
+            </amexio-chart-legend>
+
+
+        </amexio-chart-area>
+
+    </amexio-column>
+</amexio-row>
+
+<amexio-panel [header]="true" [title]="'Panel'" [expanded]="true" [height]="500">
+    <amexio-chart-bar *ngIf="testbarchartLocalData" [data]="testbarchartLocalData" [height]="'400px'" [width]="'100%'">
+
+        <amexio-chart-title [title]="'Chart Title'" [font-size]="15">
+        </amexio-chart-title>
+
+        <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+        </amexio-chart-legend>
+
+    </amexio-chart-bar>
+    <amexio-item-selector [display-field]="'countryName'" [value-field]="'id'" [height]="200" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [data]="testitem_Data">
+    </amexio-item-selector>
+</amexio-panel>

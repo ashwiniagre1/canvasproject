@@ -1,0 +1,49 @@
+<amexio-row>
+    <amexio-column size="6">
+        <amexio-dropdown [(ngModel)]="testuiModel.country" [place-holder]="'Choose country'" name="testuiModel.country" [search]="true" [field-label]="'Country'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'"
+            [data]="country_Data" [display-field]="'countryName'" [value-field]="'id'" [search]="'true'" (click)="click_country($event)">
+        </amexio-dropdown>
+    </amexio-column>
+    <amexio-column size="6">
+        <amexio-dropdown [(ngModel)]="testuiModel.state" [place-holder]="'Choose State'" name="testuiModel.state" [search]="true" [field-label]="'State'" [data]="state_Data" [display-field]="'stateName'" [value-field]="'stateId'" [search]="'true'">
+        </amexio-dropdown>
+    </amexio-column>
+</amexio-row>
+
+<amexio-accordion [transparent]="false" [angle-icon]="true" [expand-all]="false">
+    <amexio-accordion-tab [header]="'Accordion Tab'" [active]="true" [disabled]="false">
+        <amexio-listbox [filter]="true" [data]="countrylist_Data" [height]="250" [search-placeholder]="'Search country'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [display-field]="'countryName'" [header]="'Country'">
+        </amexio-listbox>
+    </amexio-accordion-tab>
+    <amexio-accordion-tab [header]="'Accordion Tab'" [active]="true" [disabled]="false">
+        <amexio-datagrid [title]="'Country'" [page-size]="10" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [enable-data-filter]="true" [enable-column-fiter]="true">
+            <amexio-data-table-column [text]="'Name'" [data-index]="'countryName'" [data-type]="'string'">
+            </amexio-data-table-column>
+            <amexio-data-table-column [text]="'code'" [data-index]="'countryCode1'" [data-type]="'string'">
+            </amexio-data-table-column>
+            <amexio-data-table-column [text]="'currency'" [data-index]="'currencyName'" [data-type]="'string'">
+            </amexio-data-table-column>
+        </amexio-datagrid>
+    </amexio-accordion-tab>
+</amexio-accordion>
+<amexio-panel [header]="true" [title]="'Panel'" [expanded]="true" [height]="400">
+    <amexio-tab-view>
+        <amexio-tab [title]="'Countrygrid'" [icon]="'fa fa-flag fa 2x'">
+            <amexio-typeahead [(ngModel)]="testuiModel.typecountry" name="testuiModel.typecountry" [field-label]="'Type Ahead'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [display-field]="'countryName'" [value-field]="'id'"
+                [key]="'countryName'" [trigger-char]="1" [data]="typecountry_Data">
+            </amexio-typeahead>
+        </amexio-tab>
+        <amexio-tab [title]="'countrylist1'" active="true" [icon]="''">
+            <amexio-datagrid [title]="'list'" [page-size]="10" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [enable-column-fiter]="true">
+                <amexio-data-table-column [text]="'id'" [data-index]="'id'" [data-type]="'string'" [hidden]="true">
+                </amexio-data-table-column>
+                <amexio-data-table-column [text]="'name'" [data-index]="'countryName'" [data-type]="'string'">
+                </amexio-data-table-column>
+                <amexio-data-table-column [text]="'code'" [data-index]="'countryCode1'" [data-type]="'string'">
+                </amexio-data-table-column>
+                <amexio-data-table-column [text]="'currency'" [data-index]="'currencyName'" [data-type]="'string'">
+                </amexio-data-table-column>
+            </amexio-datagrid>
+        </amexio-tab>
+    </amexio-tab-view>
+</amexio-panel>
