@@ -45,6 +45,9 @@ const routes: Routes = [
 	     	{
      	path: 'core/formui', loadChildren: './../pages/canvasprojecttest/core/formui/formui.module#FormuiModule'
      	},	
+	     	{
+     	path: 'core/countryui', loadChildren: './../pages/canvasprojecttest/core/countryui/countryui.module#CountryuiModule'
+     	},	
 	    ]
   }
 ];

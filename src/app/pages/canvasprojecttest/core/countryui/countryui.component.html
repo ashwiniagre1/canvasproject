@@ -1,0 +1,11 @@
+<amexio-row>
+    <amexio-column size="6">
+        <amexio-dropdown [(ngModel)]="countryuiModel.countryId" name="countryuiModel.countryId" [search]="true" [field-label]="'country'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [data]="countryId_Data"
+            [display-field]="'countryName'" [value-field]="'id'" (onSingleSelect)="onSingleSelect_countryId($event)">
+        </amexio-dropdown>
+    </amexio-column>
+    <amexio-column size="6">
+        <amexio-dropdown [(ngModel)]="countryuiModel.stateId" name="countryuiModel.stateId" [search]="true" [field-label]="'State'" [data]="stateId_Data" [display-field]="'stateName'" [value-field]="'stateId'">
+        </amexio-dropdown>
+    </amexio-column>
+</amexio-row>
