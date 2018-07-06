@@ -1,6 +1,6 @@
 /**
  * Created by: Ashwini Agre
- * Date: 04/07/2018
+ * Date: 05/07/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -14,6 +14,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class TestdatapointComponent implements OnInit
 {
 	testdatapointModel:TestdatapointModel;
+	barchatchartLocalData:any;
 	
 	constructor(private http: HttpClient,private router: Router)
 	{
@@ -21,9 +22,23 @@ export class TestdatapointComponent implements OnInit
 	}
 	ngOnInit()
 	{
+		this.fetchbarchatchartLocalDataChart();
 	}
 	
 	
+	fetchbarchatchartLocalDataChart()
+	{
+		let reponseData: any;
+		this.http.get('').subscribe(response => 
+		{
+			reponseData = response;
+		},
+	(err) => {},
+		() => {
+			this.barchatchartLocalData = reponseData.data;
+		}
+		);
+	}
 	
 }
 

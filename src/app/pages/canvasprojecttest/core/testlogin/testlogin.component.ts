@@ -1,6 +1,6 @@
 /**
  * Created by: Ashwini Agre
- * Date: 04/07/2018
+ * Date: 05/07/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -23,6 +23,27 @@ export class TestloginComponent implements OnInit
 	{
 	}
 	
+	onClick_login(eventData:any)
+	{ 
+		let response: any;
+		this.http.get().subscribe(
+		(res: any) =>
+		{
+			response = res;
+		},
+		(error: any) => 
+		{
+			
+		},
+		() => 
+		{
+			this.loginBindResponse_1(response);
+		});
+	}
+	loginBindResponse_1(response: any)
+	{
+		
+	} 
 	
 	
 }

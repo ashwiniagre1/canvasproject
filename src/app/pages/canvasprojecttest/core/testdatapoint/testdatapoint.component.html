@@ -14,3 +14,17 @@
         </amexio-datapoints>
     </amexio-column>
 </amexio-row>
+
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-chart-bar *ngIf="barchatchartLocalData" [data]="barchatchartLocalData" [height]="'400px'" [width]="'100%'">
+
+            <amexio-chart-title [title]="'Chart Title'" [font-size]="15">
+            </amexio-chart-title>
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+            </amexio-chart-legend>
+
+        </amexio-chart-bar>
+    </amexio-column>
+</amexio-row>

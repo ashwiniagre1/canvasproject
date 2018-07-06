@@ -47,6 +47,27 @@ export class CountryuiComponent implements OnInit
 		this.stateId_Data=response.response;
 		
 	} 
+	onSingleSelect_stateId(eventData:any)
+	{ 
+		let response: any;
+		this.http.get('https://uat.amexio.org:8991/rest-sample-app/api/state/findbycountryid'+'/'+this.countryuiModel.countryId).subscribe(
+		(res: any) =>
+		{
+			response = res;
+		},
+		(error: any) => 
+		{
+			
+		},
+		() => 
+		{
+			this.stateIdBindResponse_1(response);
+		});
+	}
+	stateIdBindResponse_1(response: any)
+	{
+		
+	} 
 	
 	
 }

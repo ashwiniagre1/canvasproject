@@ -12,7 +12,7 @@
     </amexio-body>
 
     <amexio-action>
-        <amexio-button [label]="'Login'" [type]="'theme-color'" [tooltip]="'login'" [size]="'default'" [form-bind]="'login'">
+        <amexio-button [label]="'Login'" [type]="'theme-color'" [tooltip]="'login'" [size]="'default'" [form-bind]="'login'" (onClick)="onClick_login($event)">
         </amexio-button>
 
     </amexio-action>

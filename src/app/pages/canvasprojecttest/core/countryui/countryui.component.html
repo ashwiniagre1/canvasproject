@@ -5,7 +5,7 @@
         </amexio-dropdown>
     </amexio-column>
     <amexio-column size="6">
-        <amexio-dropdown [(ngModel)]="countryuiModel.stateId" name="countryuiModel.stateId" [search]="true" [field-label]="'State'" [data]="stateId_Data" [display-field]="'stateName'" [value-field]="'stateId'">
+        <amexio-dropdown [(ngModel)]="countryuiModel.stateId" name="countryuiModel.stateId" [search]="true" [field-label]="'State'" [data]="stateId_Data" [display-field]="'stateName'" [value-field]="'stateId'" (onSingleSelect)="onSingleSelect_stateId($event)">
         </amexio-dropdown>
     </amexio-column>
 </amexio-row>
